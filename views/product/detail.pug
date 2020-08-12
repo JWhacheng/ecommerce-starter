@@ -1,0 +1,45 @@
+extends ../layout
+
+block content
+  section.bg-light.py-5
+    .container
+      .card
+        .row.no-gutters
+          aside.col-sm-6.border-right
+            article.gallery-wrap
+              .img-big-wrap
+                a(href='#')
+                  img(src='/uploads/products/1.jpg')
+              .thumbs-wrap
+                a.item-thumb(href='#')
+                  img(src='/uploads/products/1.jpg')
+                a.item-thumb(href='#')
+                  img(src='/uploads/products/2.jpg')
+                a.item-thumb(href='#')
+                  img(src='/uploads/products/3.jpg')
+                a.item-thumb(href='#')
+                  img(src='/uploads/products/4.jpg')
+          main.col-sm-6
+            article.content-body
+              h2.title Great demo product name
+              p
+                | Here goes description consectetur adipisicing elit, sed do eiusmod
+                | tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                | quis nostrud exercitation ullamco. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                | tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                | quis nostrud exercitation ullamco laboris.
+              .h3.mb-4
+                span.price.h4 $815.00
+              .row
+                .col-2
+                  input.form-control(type="number", min="1", value="1")
+                .col-2
+                  select.form-control.form-select
+                    option  Size 
+                    option  XL 
+                    option  MD 
+                    option  XS 
+                .col
+                  a.btn.btn-primary.w-100(href='#')
+                    span.text Add to cart
+                    i.fas.fa-shopping-cart

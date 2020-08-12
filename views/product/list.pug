@@ -1,0 +1,96 @@
+extends ../layout
+
+block content 
+  section.bg-light.py-5
+    .container.my-4
+      h2.title-page #{title}
+      nav(aria-label='breadcrumb')
+        ol.breadcrumb
+          li.breadcrumb-item
+            a(href="/") Home
+          li.breadcrumb-item.active Products
+  section.py-4
+    .container
+      .row
+        aside.col-md-3
+          .card
+            .filter-group
+              .card-header
+                a(href='#', data-toggle='collapse', data-target='#collapse_1', aria-expanded='true')
+                  i.icon-control.fa.fa-chevron-down
+                  h6.title Category
+              #collapse_1.filter-content.collapse.show(style='')
+                .card-body
+                  ul.list-menu
+                    li
+                      a(href='#') Category 1
+                    li
+                      a(href='#') Category 2
+                    li
+                      a(href='#') Category 3
+            .filter-group
+              .card-header
+                a(href='#', data-toggle='collapse', data-target='#collapse_4', aria-expanded='true')
+                  i.icon-control.fa.fa-chevron-down
+                  h6.title Sizes 
+              #collapse_4.filter-content.collapse.show(style='')
+                .card-body
+                  label.checkbox-btn.mr-2
+                    input(type='checkbox')
+                    span.btn.btn-light  XS 
+                  label.checkbox-btn.mr-2
+                    input(type='checkbox')
+                    span.btn.btn-light  SM 
+                  label.checkbox-btn.mr-2
+                    input(type='checkbox')
+                    span.btn.btn-light  LG 
+                  label.checkbox-btn
+                    input(type='checkbox')
+                    span.btn.btn-light  XXL
+        main.col-md-9
+          .border-bottom.pb-3.mb-4
+            p.mb-0 32 Items found
+          .row
+            .col-md-4
+              .card.card-product-grid
+                a.img-wrap(href="/products/1312931")
+                  img(src="/uploads/products/5.jpg", alt="")
+                  .overlay
+                    i.fa.fa-search-plus
+                    |  View product
+                .info-wrap
+                  .description
+                    a.product-name(href="/products/1312931") Item name goes here
+                    .price-wrap.mt-2
+                      span.price $500.00
+                      del.price-old $580.99
+                  a.btn.btn-block.btn-primary(href="#") Add to cart
+            .col-md-4
+              .card.card-product-grid
+                a.img-wrap(href="#")
+                  span.badge.bg-danger NEW
+                  img(src="/uploads/products/1.jpg", alt="")
+                  .overlay
+                    i.fa.fa-search-plus
+                    |  View product
+                .info-wrap
+                  .description
+                    a.product-name(href="#") Item name goes here
+                    .price-wrap.mt-2
+                      span.price $500.00
+                      del.price-old $580.99
+                  a.btn.btn-block.btn-primary(href="#") Add to cart
+            .col-md-4
+              .card.card-product-grid
+                a.img-wrap(href="#")
+                  span.badge.bg-danger NEW
+                  img(src="/uploads/products/2.jpg", alt="")
+                  .overlay
+                    i.fa.fa-search-plus
+                    |  View product
+                .info-wrap
+                  .description
+                    a.product-name(href="#") Item name goes here
+                    .price-wrap.mt-2
+                      span.price $500.00
+                  a.btn.btn-block.btn-primary(href="#") Add to cart

@@ -1,0 +1,215 @@
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import 'node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
+@import 'node_modules/@fortawesome/fontawesome-free/scss/brands';
+@import 'node_modules/@fortawesome/fontawesome-free/scss/regular';
+@import 'node_modules/@fortawesome/fontawesome-free/scss/solid';
+
+body {
+  background-color: #fff;
+}
+a {
+  color: #3167eb;
+  text-decoration: none;
+  background-color: transparent;
+}
+.border {
+  border: 1px solid #e5e7ea !important;
+  &-bottom {
+    border-bottom: 1px solid #e5e7ea !important;
+  }
+  &-top {
+    border-top: 1px solid #e5e7ea !important;
+  }
+  &-right {
+    border-right: 1px solid #e5e7ea !important;
+  }
+  &-left {
+    border-left: 1px solid #e5e7ea !important;
+  }
+}
+.btn-light {
+  color: #000;
+  background-color: #fff;
+  border-color: #e4e4e4;
+  &:hover {
+    border-color: #989898;
+    background-color: #fff;
+  }
+}
+.breadcrumb {
+  background-color: transparent;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+.price {
+  font-weight: 600;
+  color: #212529;
+}
+.price-old {
+  color: #969696;
+  margin-left: 3px;
+  font-size: 85%;
+}
+
+// Product card
+.card-product-grid {
+  margin-bottom: 15px;
+  .info-wrap {
+    overflow: hidden;
+    padding: 18px 20px;
+  }
+  .img-wrap {
+    border-radius: 0.2rem 0.2rem 0 0;
+    height: 220px;
+    overflow: hidden;
+    text-align: center;
+    display: block;
+    display: block;
+  }
+  .description {
+    height: 80px;
+    overflow: hidden;
+  }
+  .overlay {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    opacity: 0;
+    left: 0;
+    bottom: 0;
+    color: #fff;
+    width: 100%;
+    padding: 5px 0;
+    text-align: center;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  &:hover {
+    -webkit-box-shadow: 0 4px 15px rgba(153, 153, 153, 0.3);
+    box-shadow: 0 4px 15px rgba(153, 153, 153, 0.3);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    .overlay {
+      opacity: 1;
+    }
+  }
+}
+[class*='card-product'] {
+  .img-wrap {
+    overflow: hidden;
+    position: relative;
+    img {
+      height: 100%;
+      max-width: 100%;
+      width: auto;
+      display: inline-block;
+      -o-object-fit: cover;
+      object-fit: cover;
+    }
+    a.title {
+      color: #212529;
+      display: block;
+    }
+  }
+  .badge {
+    top: 10px;
+    left: 10px;
+    position: absolute;
+  }
+}
+
+/**
+ * ALL PRODUCTS PAGE
+ */
+
+// Filters
+.filter-group {
+  border-bottom: 1px solid #e4e4e4;
+  &:last-child {
+    border-bottom: 0;
+  }
+  .card-header {
+    border-bottom: 0;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: #fff;
+    &:first-child {
+      border-radius: calc(0.37rem - 1px) calc(0.37rem - 1px) 0 0;
+    }
+    .title {
+      margin-bottom: 0;
+      line-height: 1.5;
+    }
+    .icon-control {
+      margin-top: 5px;
+      float: right;
+      font-size: 80%;
+    }
+  }
+  .checkbox-btn {
+    position: relative;
+    input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+    }
+  }
+  .list-menu {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    li {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+/**
+ * PRODUCT DETAIL PAGE
+ */
+
+// Gallery wrap
+.gallery-wrap {
+  .img-big-wrap {
+    margin-bottom: 10px;
+    border-radius: 0.37rem;
+    overflow: hidden;
+    background-color: #fff;
+    a {
+      text-align: center;
+      display: block;
+    }
+  }
+  .thumbs-wrap {
+    text-align: center;
+    margin-bottom: 20px;
+    .item-thumb {
+      width: 60px;
+      height: 60px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      margin: 3px;
+      display: inline-block;
+      overflow: hidden;
+    }
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+      border-radius: 4px;
+      cursor: -webkit-zoom-in;
+      cursor: zoom-in;
+    }
+  }
+}
+.content-body {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 2rem 2.3rem;
+}
+.btn .text + i {
+  margin-left: 10px;
+}

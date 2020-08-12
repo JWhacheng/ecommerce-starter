@@ -1,0 +1,13 @@
+if messages.errors
+  .alert.alert-danger.fade.show
+    ul.mb-0
+      for error in messages.errors
+        li= error.msg
+if messages.info
+  .alert.alert-info.fade.show
+    for info in messages.info
+      div= info.msg
+if messages.success
+  .alert.alert-success.fade.show
+    for success in messages.success
+      div= success.msg

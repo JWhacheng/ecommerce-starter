@@ -1,0 +1,22 @@
+extends ../layout
+
+block content
+  section.my-5
+    .card.border-0.mx-auto.mt-5(style='max-width: 380px; margin-top: 50px')
+      .card-body
+        h4.card-title.text-center.mb-4 Sign in
+        include ../partials/flash
+        form(method="POST")
+          .form-group
+            label.form-label(for="email") Email address
+            input.form-control(type="email", name="email", autofocus)
+          .form-group
+            label.form-label(for="password") Password
+            input.form-control(type="password", name="password")
+          .form-group.clearfix
+            a.float-right(href="/forgot") Forgot password?
+          .form-group
+            button.btn.btn-block.btn-primary(type='submit') Login
+    p.text-center.mt-4
+      | Don't have an account? 
+      a(href="/signup") Sign up

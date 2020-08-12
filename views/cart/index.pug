@@ -1,0 +1,41 @@
+extends ../layout
+
+block content
+  section.bg-light.py-5
+    .container.my-4
+      h2.title-page Shopping cart
+  section.my-3
+    .container
+      .row
+        .col-md-9
+          .card
+            table.table.table-borderless.table-shopping-cart
+              thead.text-muted
+                tr.small.text-uppercase
+                  th Product
+                  th Quantity
+                  th Price
+                  th
+                tbody
+                  tr
+                    td
+                      .item-card
+                        .aside
+                          img.img-sm(src="/uploads/products/1.jpg", alt="")
+                        .info
+                          a.title.text-dark(href="#") A name of the product here
+                          p.text-muted.small
+                            | Size: 
+                            span#size XL
+                            br
+                            | Color: 
+                            span#color Blue
+                    td
+                      input.form-control(type="number", value="1", min="1")
+                    td
+                      .price-wrap
+                        p.price $1156.00
+                        small.text-muted $315.20 each
+                    td
+                      a.btn.btn-light(href="#") Remove
+        .col-md-3
